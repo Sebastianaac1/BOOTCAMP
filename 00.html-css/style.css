@@ -287,15 +287,16 @@ main>section:nth-child(2) footer {
     /*ya esto se refiere basicamente a el segundo seccion de html que este en el main o cuerpo y que tenga footer el section*/
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    /*esto es para que el grid se adapte a la pantalla con un maximo y un minimo*/
+    /*esto es para que el grid se adapte a la pantalla con un maximo y un minimo que es lo mismo de abajo @media*/
+    /*grid-template-columns: 1fr;*/
     gap: 16px
 }
 
-@media (width>=640px) {
+/*@media (width>=640px) {
     main>section:nth-child(2) footer {
         grid-template-columns: 1fr, 1fr, 1fr;
     }
-}
+}*/
 
 /* Feature Cards */
 /* article {
