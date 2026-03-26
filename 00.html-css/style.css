@@ -35,7 +35,7 @@
 
 
 @font-face {
-    font-family: 'times new roman';
+    font-family: 'Inter Variable';
     font-style: normal;
     font-display: swap;
     font-weight: 100 900;
@@ -325,5 +325,29 @@ footer {
     small {
         color: var(--text-muted);
         font-size: 0.875rem;
+    }
+}
+
+article {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    /*esto es una medida relativa a la fuente raiz que esta arriba 1rem son 16px
+    y el padding es de adentro hacia afuera osea la distancia de afuera con el texto de adentro*/
+    margin-bottom: 16px;
+    /*el margen es de afuera osea la distancia entre objetos*/
+    border-radius: 0.5rem;
+    /*esto es para que los bordes sean redondeados*/
+    /*box-shadow: 0px 1px 3px 0 var(--shadow);esto es para que los bordes sean redondeados elegidos*/
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.5);
+    /*el primero es el eje en horizontal(derecha+ y izquierda-) el segundo es eje vertical(abajo+ y arriba-)
+    el tercero es la difuminacion del color y el cuarto es cuan grande es y el quinto es el color*/
+
+    svg {
+        color: var(--primary-light);
+        background: rgba(0, 153, 255, 0.3);
+        width: 64px;
+        height: 64px;
+        border-radius: 100%;
+        padding: 16px;
     }
 }
