@@ -284,9 +284,17 @@ main>section:nth-child(2)>div>div:first-child>p {
 
 /* Grid de Features */
 main>section:nth-child(2) footer {
+    /*ya esto se refiere basicamente a el segundo seccion de html que este en el main o cuerpo y que tenga footer el section*/
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /*esto es para que el grid se adapte a la pantalla con un maximo y un minimo*/
     gap: 16px
+}
+
+@media (width>=640px) {
+    main>section:nth-child(2) footer {
+        grid-template-columns: 1fr, 1fr, 1fr;
+    }
 }
 
 /* Feature Cards */
@@ -350,4 +358,13 @@ article {
         border-radius: 100%;
         padding: 16px;
     }
+}
+
+p {
+    color: var(--text-muted);
+}
+
+h3 {
+    font-weight: 500;
+    /*grosor de la fuente*/
 }
