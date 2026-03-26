@@ -369,3 +369,15 @@ h3 {
     font-weight: 500;
     /*grosor de la fuente*/
 }
+
+select {
+    border-radius: 0.5rem;
+    padding: 0.4rem;
+    background-color: var(--input-bg);
+    color: var(--text-primary);
+    border: none;
+    outline: none;
+    font-size: rem;
+    font-family: inherit;
+
+}
