@@ -15,24 +15,24 @@
     </style>
     <header>
         <!--puede ir el logo la navegacion-->
-        <h2>DevJobs</h2>
+        <h2>💼 DevJobs</h2>
 
         <nav>
             <a href="">Inicio</a>
             <a href="">Empleos</a>
+            <a href="">Empresas</a>
+            <a href="">Salarios</a>
         </nav>
         <div>
-            <a href="">Publicar un empleo</a>
-            <a href="">Iniciar sesión</a>
-            <a href=""></a>
-            <a href=""></a>
+            <a href="" class="btn-subir-cv">Subir CV</a>
+            <a href="" class="avatar">👤</a>
         </div>
     </header>
     <main>
-        <section>
+        <!-- Hero con búsqueda y filtros -->
+        <section class="hero-empleos">
             <h1>Encuentra tu próximo trabajo</h1>
             <p>Explora miles de oportunidades en el sector tecnológico</p>
-
 
             <form role="search">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -40,15 +40,11 @@
                     <circle cx="11" cy="11" r="8"></circle>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
-
                 <input type="text" placeholder="Buscar trabajos, empresas o habilidades" />
-
-                <button type="submit">Buscar</button>
             </form>
 
-
-            <section>
-
+            <!-- Filtros justo debajo del buscador -->
+            <div class="filtros">
                 <select>
                     <option disabled selected class="ocultar">Tecnología</option>
                 </select>
@@ -61,8 +57,74 @@
                 <select>
                     <option disabled selected class="ocultar">Nivel de experiencia</option>
                 </select>
+            </div>
+        </section>
 
-            </section>
+        <!-- Resultados de búsqueda -->
+        <section class="resultados">
+            <h2>Resultados de búsqueda</h2>
+
+            <article class="empleo-card">
+                <div class="empleo-info">
+                    <div>
+                        <h3>Ingeniero de Software</h3>
+                        <span class="empresa">Tech Solutions Inc. | Remoto</span>
+                    </div>
+                    <a href="#" class="btn-aplicar">Aplicar</a>
+                </div>
+                <p>Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en JavaScript,
+                    React y Node.js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades
+                    de comunicación.</p>
+            </article>
+
+            <article class="empleo-card">
+                <div class="empleo-info">
+                    <div>
+                        <h3>Analista de Datos</h3>
+                        <span class="empresa">Data Driven Co. | Ciudad de México</span>
+                    </div>
+                    <a href="#" class="btn-aplicar">Aplicar</a>
+                </div>
+                <p>Estamos buscando un analista de datos con experiencia en el manejo de grandes conjuntos de datos y
+                    herramientas de visualización. Se requiere conocimiento en SQL, Python y R.</p>
+            </article>
+
+            <article class="empleo-card">
+                <div class="empleo-info">
+                    <div>
+                        <h3>Desarrollador de Aplicaciones Móviles</h3>
+                        <span class="empresa">Mobile Apps Ltd. | Guadalajara</span>
+                    </div>
+                    <a href="#" class="btn-aplicar">Aplicar</a>
+                </div>
+                <p>Buscamos un desarrollador de aplicaciones móviles con experiencia en iOS y/o Android. El candidato
+                    debe tener conocimientos en Swift, Kotlin y el desarrollo de interfaces de usuario.</p>
+            </article>
+
+            <article class="empleo-card">
+                <div class="empleo-info">
+                    <div>
+                        <h3>Ingeniero de DevOps</h3>
+                        <span class="empresa">Cloud Services SA | Remoto</span>
+                    </div>
+                    <a href="#" class="btn-aplicar">Aplicar</a>
+                </div>
+                <p>Estamos buscando un Ingeniero de DevOps con experiencia en la gestión de infraestructuras en la nube,
+                    automatización de procesos y herramientas de integración continua. Se requiere conocimiento en AWS,
+                    Azure o GCP.</p>
+            </article>
+        </section>
+
+        <!-- Paginación -->
+        <nav class="paginacion">
+            <button>&lt;</button>
+            <button class="activo">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>&gt;</button>
+        </nav>
     </main>
 </body>
 

@@ -133,6 +133,12 @@ nav {
 }
 
 /* Botones del Header */
+header div {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
 header div a {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
@@ -142,7 +148,6 @@ header div a {
     font-size: 0.875rem;
     font-weight: 700;
     text-decoration: none;
-    /* TODO */
 }
 
 /* Hero */
@@ -176,6 +181,7 @@ form {
     width: 100%;
     margin: 0 auto;
     padding-inline: 1rem;
+
 }
 
 form>div {
@@ -372,12 +378,187 @@ h3 {
 
 select {
     border-radius: 0.5rem;
-    padding: 0.4rem;
+    padding: 0.5rem 1rem;
     background-color: var(--input-bg);
     color: var(--text-primary);
-    border: none;
+    border: 1px solid var(--border);
     outline: none;
-    font-size: rem;
+    font-size: 0.875rem;
     font-family: inherit;
+    cursor: pointer;
+}
 
+/* ===================== */
+/* PÁGINA DE EMPLEOS     */
+/* ===================== */
+
+/* Hero compacto para empleos */
+.hero-empleos {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1rem 2rem;
+}
+
+.hero-empleos h1 {
+    justify-content: center;
+}
+
+.hero-empleos form {
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+}
+
+/* Filtros en fila horizontal */
+.filtros {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Sección de resultados */
+.resultados {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.resultados h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* Tarjetas de empleo */
+.empleo-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.2s;
+}
+
+.empleo-card:hover {
+    border-color: var(--primary-light);
+}
+
+.empleo-card svg {
+    background: none;
+    width: auto;
+    height: auto;
+    padding: 0;
+}
+
+.empleo-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.empleo-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.empleo-card .empresa {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.empleo-card p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* Botón Aplicar */
+.btn-aplicar {
+    display: inline-block;
+    padding: 0.4rem 1.25rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary-light);
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+    flex-shrink: 0;
+}
+
+.btn-aplicar:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Paginación */
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 1.5rem 1rem 2.5rem;
+}
+
+.paginacion button {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paginacion button:hover {
+    color: var(--primary-light);
+    background-color: transparent;
+    outline: none;
+}
+
+.paginacion button.activo {
+    background-color: var(--primary-light);
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+/* Avatar circular en el header */
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--card-bg);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border: 1px solid var(--border);
+}
+
+/* Botón Subir CV en el header */
+.btn-subir-cv {
+    padding: 0.4rem 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary-light);
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn-subir-cv:hover {
+    background-color: var(--primary-hover);
 }
