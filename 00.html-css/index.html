@@ -16,12 +16,22 @@
 <body>
     <header>
         <!--puede ir el logo la navegacion-->
-        <h2>DevJobs</h2>
+        <h1>
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            DevJobs
+        </h1>
 
         <nav>
             <a href="index.html">Inicio</a>
-            <a href="empleos.html">Empleos</a>
-            <a href="">Empresas</a>
+            <a href="empleos.html" rel="noopener noreferrer">Empleos</a>
+            <!--target="_self"se abre en la actual _blanck se abre en otra pestaña
+            y el rel es para que no se muestre informacion del usuario en el url
+            y no se pase informacion del usuario a la pagina que se abre-->
+            <a href="empleos2.html">Empresas</a>
             <a href="">Salarios</a>
         </nav>
         <div>
