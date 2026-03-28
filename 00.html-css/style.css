@@ -437,6 +437,7 @@ select {
     max-width: 960px;
     margin: 0 auto;
     padding: 0.75rem 1rem 0;
+    border-radius: 0.5rem;
 }
 
 .resultados h2 {
@@ -489,6 +490,13 @@ select {
 
 .btn-aplicar:hover {
     background-color: var(--primary-hover);
+}
+
+.hero-empleos {
+    margin: 0;
+    padding: 0;
+    height: auto !important;
+    /*intentar no usar esto arreglo el tema de la altura*/
 }
 
 /* Paginación */
@@ -561,7 +569,7 @@ select {
 /* Reutiliza article como base, solo sobreescribe lo necesario */
 .empleo-card {
     background-color: transparent;
-    border: 1px solid var(--border);
+
     padding: 1.25rem 1.5rem;
     margin-bottom: 0;
     box-shadow: none;
@@ -569,13 +577,30 @@ select {
     transition: border-color 0.2s;
 }
 
+
 .empleo-card:hover {
     border-color: var(--primary-light);
 }
 
-.hero-empleos {
+/* .hero-empleos {
     height: 100%;
     max-height: 15rem;
-    /*altura de la pagina de empleos lo hice manual no encontre
-    la forma de no hacerlo manual*/
+    altura de la pagina de empleos lo hice manual no encontre
+    la forma de no hacerlo manual
+}*/
+.entero {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+
+    article {
+        background-color: none;
+        box-shadow: none;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        margin: 0;
+
+        &:last-child {}
+    }
+
+
 }
