@@ -602,6 +602,8 @@ select {
         &:last-child {
             border-bottom: none;
         }
+
+        /*div del form de empleos*/
     }
 
 
