@@ -486,6 +486,11 @@ select {
     white-space: nowrap;
     transition: background-color 0.2s;
     flex-shrink: 0;
+
+    &.is-applied {
+        background-color: #4caf50;
+        pointer-events: none;
+    }
 }
 
 .btn-aplicar:hover {
