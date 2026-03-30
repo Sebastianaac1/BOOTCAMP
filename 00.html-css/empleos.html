@@ -5,6 +5,28 @@
     <meta charset="UTF-8">
     <title>DevJobs - Empleos</title>
     <link rel="stylesheet" href="./style.css">
+
+    <!--Para hacer un llamado de funcione JS es de las siguentes dos formar-->
+    <!--Arrow funcion es para ahorrrar codigo, es decir, es lo mismo que decir:-->
+    <!--
+        const boton= document.querySelector('#boton-importante')
+        
+        boton.addEventListener('click', function() {
+            alert('Gracias por tu interés, Pronto nos pondremos en contacto contigo,')
+        })
+    -->
+    <!--El type module es para que cargue despues que carga HTML, si 
+    no, saldra un error porque no encuentra el elemento--><!--
+    <script type="module"
+        const boton = document.querySelector('#boton-importante')
+
+        boton.addEventListener('click', () => {
+            alert('Gracias por tu interés, Pronto nos pondremos en contacto contigo,')
+        })
+    </script>-->
+    <!--Pero para hacerlo bien y mejor es asi -->
+    <script type="module" src="./script.js"></script>
+    <!--Esta arrow funcion tiene un return implicito-->
 </head>
 
 <body>
@@ -80,7 +102,7 @@
                             <h3>Ingeniero de Software</h3>
                             <span class="empresa">Tech Solutions Inc. | Remoto</span>
                         </div>
-                        <a href="#" class="btn-aplicar">Aplicar</a>
+                        <a id="boton-importante" class="btn-aplicar">Aplicar</a>
                     </div>
                     <p>Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en
                         JavaScript,
