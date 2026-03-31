@@ -33,6 +33,11 @@ JobsListingSection?.addEventListener('click', function(event) {//a esta funcion 
         element.classList.add('is-applied')
         element.disabled = true
     }
+    if(element.classList.contains('empleo-card' && 'empleo-info')){
+        //window.location.href = './detalles-de-la-oferta.html'
+        console.log(element)
+        console.log(element.querySelector('.info').textContent)
+    }
 })
 
 const filtert = document.querySelector('#filter-technology')
