@@ -76,17 +76,35 @@
 
             <!-- Filtros justo debajo del buscador -->
             <div class="filtros">
-                <select>
+                <select name="technology" id="filter-technology">
                     <option disabled selected class="ocultar">Tecnología</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="react">React</option>
+                    <option value="nodejs">Node.js</option>
                 </select>
-                <select>
+                <select name="location" id="filter-location">
                     <option disabled selected class="ocultar">Ubicación</option>
+                    <option value="remoto">Remoto</option>
+                    <option value="ciudad-de-mexico">Ciudad de México</option>
+                    <option value="guadalajara">Guadalajara</option>
+                    <option value="monterrey">Monterrey</option>
+                    <option value="barcelona">Barcelona</option>
                 </select>
-                <select>
+                <select name="contract-type" id="filter-contract-type">
                     <option disabled selected class="ocultar">Tipo de contrato</option>
+                    <option value="tiempo-completo">Tiempo completo</option>
+                    <option value="medio-tiempo">Medio tiempo</option>
+                    <option value="por-horas">Por horas</option>
+                    <option value="por-proyecto">Por proyecto</option>
                 </select>
-                <select>
+                <select name="experience-level" id="filter-experience-level">
                     <option disabled selected class="ocultar">Nivel de experiencia</option>
+                    <option value="junior">Junior</option>
+                    <option value="mid">Mid</option>
+                    <option value="senior">Senior</option>
+                    <option value="lead">Lead</option>
                 </select>
             </div>
         </section>
@@ -99,7 +117,7 @@
                     <div class="empleo-info">
                         <div>
                             <h3>Ingeniero de Software</h3>
-                            <span class="empresa">Tech Solutions Inc. | Remoto</span>
+                            <small class="empresa">Tech Solutions Inc. | Remoto</small>
                         </div>
                         <a id="boton-importante" class="btn-aplicar">Aplicar</a>
                     </div>
@@ -114,7 +132,7 @@
                     <div class="empleo-info">
                         <div>
                             <h3>Analista de Datos</h3>
-                            <span class="empresa">Data Driven Co. | Ciudad de México</span>
+                            <small class="empresa">Data Driven Co. | Ciudad de México</small>
                         </div>
                         <a class="btn-aplicar">Aplicar</a>
                     </div>
@@ -127,7 +145,7 @@
                     <div class="empleo-info">
                         <div>
                             <h3>Desarrollador de Aplicaciones Móviles</h3>
-                            <span class="empresa">Mobile Apps Ltd. | Guadalajara</span>
+                            <small class="empresa">Mobile Apps Ltd. | Guadalajara</small>
                         </div>
                         <a class="btn-aplicar">Aplicar</a>
                     </div>
@@ -140,7 +158,7 @@
                     <div class="empleo-info">
                         <div>
                             <h3>Ingeniero de DevOps</h3>
-                            <span class="empresa">Cloud Services SA | Remoto</span>
+                            <small class="empresa">Cloud Services SA | Remoto</small>
                         </div>
                         <a class="btn-aplicar">Aplicar</a>
                     </div>

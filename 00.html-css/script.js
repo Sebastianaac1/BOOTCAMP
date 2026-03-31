@@ -34,3 +34,27 @@ JobsListingSection?.addEventListener('click', function(event) {//a esta funcion 
         element.disabled = true
     }
 })
+
+const filtert = document.querySelector('#filter-technology')
+
+filtert.addEventListener('change', function() {
+    console.log(filtert.value)
+})
+
+const filterl = document.querySelector('#filter-location')
+
+filterl.addEventListener('change', function() {
+    console.log(filterl.value)
+})
+
+const filterc = document.querySelector('#filter-contract-type')
+
+filterc.addEventListener('change', function() {
+    console.log(filterc.value)
+})
+
+const filtere = document.querySelector('#filter-experience-level')
+
+filtere.addEventListener('change', function() {
+    console.log(filtere.value)
+})
