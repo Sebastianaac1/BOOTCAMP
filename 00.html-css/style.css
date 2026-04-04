@@ -74,7 +74,7 @@ body {
 
 
 
-/* Títulos principales */
+/* TÃ­tulos principales */
 h1 {
     font-size: 1.5rem;
     line-height: 1.2;
@@ -93,6 +93,7 @@ h1 {
 h1+p {
     text-wrap: balance;
     margin-bottom: 2rem
+    
 }
 
 /* Header */
@@ -114,7 +115,7 @@ header {
     }
 }
 
-/* Navegación del header a otras páginas */
+/* NavegaciÃ³n del header a otras pÃ¡ginas */
 nav {
     align-items: center;
     gap: 1rem;
@@ -180,7 +181,7 @@ main>section:nth-child(1) {
     }
 }
 
-/* Formulario de Búsqueda */
+/* Formulario de BÃºsqueda */
 form {
     max-width: 42rem;
     width: 100%;
@@ -236,7 +237,7 @@ button {
     white-space: nowrap;
 
     &:hover,
-    /* pseudo-clase que significa que el ratón está encima */
+    /* pseudo-clase que significa que el ratÃ³n estÃ¡ encima */
     &:focus {
         /* pseudo-clase que significa que el elemento tiene el foco */
         background-color: var(--primary-hover);
@@ -394,7 +395,7 @@ select {
 }
 
 /* ===================== */
-/* PÁGINA DE EMPLEOS     */
+/* PÃGINA DE EMPLEOS     */
 /* ===================== */
 
 /* Hero compacto para empleos */
@@ -432,7 +433,7 @@ select {
     padding-inline: 1rem;
 }
 
-/* Sección de resultados */
+/* SecciÃ³n de resultados */
 .resultados {
     max-width: 960px;
     margin: 0 auto;
@@ -473,7 +474,7 @@ select {
     line-height: 1.5;
 }
 
-/* Botón Aplicar */
+/* BotÃ³n Aplicar */
 .btn-aplicar {
     display: inline-block;
     padding: 0.4rem 1.25rem;
@@ -504,7 +505,7 @@ select {
     /*intentar no usar esto arreglo el tema de la altura*/
 }
 
-/* Paginación */
+/* PaginaciÃ³n */
 .paginacion {
     display: flex;
     justify-content: center;
@@ -555,7 +556,7 @@ select {
     border: 1px solid var(--border);
 }
 
-/* Botón Subir CV en el header */
+/* BotÃ³n Subir CV en el header */
 .btn-subir-cv {
     padding: 0.4rem 1rem;
     border-radius: 0.5rem;
@@ -612,4 +613,159 @@ select {
     }
 
 
+}
+
+.oferta {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0.75rem 1rem 0;
+    border-radius: 0.5rem;
+}
+
+
+/* ===================== */
+/* DETALLES DE LA OFERTA */
+/* ===================== */
+
+.breadcrumb {
+    /* Limitamos el ancho para que coincida con el resto de la pÃ¡gina */
+    max-width: 960px;
+    /* Lo centramos horizontalmente en la pantalla */
+    margin: 0 auto;
+    /* AÃ±adimos espaciado para empujarlo un poco hacia abajo */
+    padding: 2rem 1rem 1rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    span{
+        color: var(--text-primary);
+    }
+}
+
+.breadcrumb a {
+    color: var(--text-muted);
+    /* Quitamos la lÃ­nea de abajo de los enlaces */
+    text-decoration: none;
+}
+
+
+.breadcrumb a:hover {
+    /* Color celeste al pasar el mouse */
+    color: var(--primary-light);
+}
+
+/* El contenedor principal de nuestra cabecera de oferta */
+#oferta-header {
+    /* Quitamos la línea de abajo y fondos que se heredaban de la regla global "header" */
+    border-bottom: none;
+    background: transparent;
+    padding: 0;
+
+    /* Activamos Flexbox para poder alinear elementos a los lados */
+    display: flex;
+    /* Forzamos que se acomoden en una SOLA fila horizontal (anulando cualquier regla que los ponga en columna) */
+    flex-direction: row;
+    /* space-between empuja la caja del tÃ­tulo a la izq y el botÃ³n a la der */
+    justify-content: space-between;
+    /* Centra los elementos verticalmente (para que el botÃ³n y el tÃ­tulo estÃ©n a la misma altura) */
+    align-items: center;
+    
+    /* Separador hacia abajo para que el texto de descripciÃ³n no quede pegado */
+    margin-bottom: 2rem;
+    /* Permite que si la pantalla es muy pequeÃ±a en mÃ³viles, se rompa a la lÃ­nea siguiente en vez de aplastarse */
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+}
+.oferta{
+    p{
+        color: var(--text-primary);
+    }
+}
+/* El grupo que envuelve el TÃ­tulo (h1) y la Empresa (p) */
+#oferta-header .oferta-title-group {
+    display: flex;
+    /* Ponemos el tÃ­tulo y debajo la empresa (en columna) */
+    flex-direction: column;
+    /* Una pequeÃ±Ã­sima separaciÃ³n entre el tÃ­tulo y la frase de la empresa */
+    gap: 0.25rem;
+    
+    /* !!! AQUÃ ESTABA EL PROBLEMA DEL TEXTO AL MEDIO !!!
+       La regla "header div" de la lÃ­nea 138 obligaba a todos los divs dentro de headers a usar 
+       "align-items: center" y "flex: 1". 
+       Al usar column, align-items alinea horizontalmente en el medio. 
+       Y el flex:1 hacia que la caja ocupara todo el ancho.
+       Esto la fuerza de vuelta a la izquierda, anulando esa regla: */
+    align-items: flex-start;
+    /* Anula que esta caja crezca para ocupar todo el ancho, ocuparÃ¡ solo lo necesario */
+    flex: initial;
+}
+
+/* Estilos de nuestro tÃ­tulo principal */
+#oferta-header h1 {
+    font-size: 2rem;
+    /* Quitamos posibles mÃ¡rgenes extraÃ±os que vienen por defecto en los h1 */
+    margin: 0;
+    padding: 0;
+    color: var(--text-primary);
+}
+
+/* Estilos del texto de la empresa inc.*/
+#oferta-header .empresa {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* SubtÃ­tulos de la oferta (ej. Responsabilidades) */
+.oferta h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+/* Textos dentro de la oferta */
+.oferta p, .oferta ul {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    /* La altura de la lÃ­nea ayuda a que el pÃ¡rrafo sea mÃ¡s amigable de leer */
+    line-height: 1.6;
+}
+
+/* Puntos o listas dentro de la oferta */
+.oferta ul {
+    /* Le da espacio desde la izquierda a los puntitos (bullets) */
+    padding-left: 1.5rem;
+}
+ul {
+    list-style: none;
+    span{
+        color: var(--text-primary);
+        font-size: 1rem;/*tamaño letra*/
+        padding: 0.5rem;/*esto es para alejarlo del check*/
+
+    }
+    li{
+        display: flex;/*esto lo transforma en flex*/
+        align-items: center;/*esto centra el texto con el check*/
+    }
+}
+.oferta h2 + p{
+    color: var(--text-primary);
+}
+
+/* Base del botón inferior para mantener el ancho exacto del contenido (.oferta) */
+.oferta-footer {
+    /* Agrega la línea divisoria arriba */
+    border-top: 1px solid var(--border);
+    /* Distancia con la P de arriba (Acerca de la empresa) */
+    margin-top: 1rem;
+    /* Distancia entre la línea recién dibujada y el botón debajo suyo */
+    padding-top: 2rem;
+    /* Espacio para terminar bien la página */
+    padding-bottom: 3rem;
+    
+    /* Flex para empujar rápido el botón al extremo derecho */
+    display: flex;
+    justify-content: flex-end;
 }

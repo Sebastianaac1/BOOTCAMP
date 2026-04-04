@@ -34,9 +34,9 @@ JobsListingSection?.addEventListener('click', function(event) {//a esta funcion 
         element.disabled = true
     }
     if(element.classList.contains('empleo-card' && 'empleo-info')){
-        //window.location.href = './detalles-de-la-oferta.html'
+        window.location.href = './detalles-de-la-oferta.html'
         console.log(element)
-        console.log(element.querySelector('.info').textContent)
+        //console.log(element.querySelector('.info').textContent)
     }
 })
 
