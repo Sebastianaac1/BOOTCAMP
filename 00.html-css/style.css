@@ -93,7 +93,6 @@ h1 {
 h1+p {
     text-wrap: balance;
     margin-bottom: 2rem
-    
 }
 
 /* Header */
@@ -190,7 +189,7 @@ form {
 
 }
 
-form>div {
+form>div.search_bar {
     display: flex;
     align-items: center;
     background-color: var(--input-bg);
@@ -411,7 +410,7 @@ select {
 
 .hero-empleos form {
     max-width: 960px;
-
+    width: 100%;
 }
 
 .hero-empleos h1 {
@@ -636,7 +635,8 @@ select {
     padding: 2rem 1rem 1rem;
     color: var(--text-muted);
     font-size: 0.9rem;
-    span{
+
+    span {
         color: var(--text-primary);
     }
 }
@@ -668,19 +668,21 @@ select {
     justify-content: space-between;
     /* Centra los elementos verticalmente (para que el botÃ³n y el tÃ­tulo estÃ©n a la misma altura) */
     align-items: center;
-    
+
     /* Separador hacia abajo para que el texto de descripciÃ³n no quede pegado */
     margin-bottom: 2rem;
     /* Permite que si la pantalla es muy pequeÃ±a en mÃ³viles, se rompa a la lÃ­nea siguiente en vez de aplastarse */
     flex-wrap: wrap;
     gap: 1rem;
-    
+
 }
-.oferta{
-    p{
+
+.oferta {
+    p {
         color: var(--text-primary);
     }
 }
+
 /* El grupo que envuelve el TÃ­tulo (h1) y la Empresa (p) */
 #oferta-header .oferta-title-group {
     display: flex;
@@ -688,7 +690,7 @@ select {
     flex-direction: column;
     /* Una pequeÃ±Ã­sima separaciÃ³n entre el tÃ­tulo y la frase de la empresa */
     gap: 0.25rem;
-    
+
     /* !!! AQUÃ ESTABA EL PROBLEMA DEL TEXTO AL MEDIO !!!
        La regla "header div" de la lÃ­nea 138 obligaba a todos los divs dentro de headers a usar 
        "align-items: center" y "flex: 1". 
@@ -725,7 +727,8 @@ select {
 }
 
 /* Textos dentro de la oferta */
-.oferta p, .oferta ul {
+.oferta p,
+.oferta ul {
     color: var(--text-muted);
     margin-bottom: 1rem;
     /* La altura de la lÃ­nea ayuda a que el pÃ¡rrafo sea mÃ¡s amigable de leer */
@@ -737,20 +740,28 @@ select {
     /* Le da espacio desde la izquierda a los puntitos (bullets) */
     padding-left: 1.5rem;
 }
+
 ul {
     list-style: none;
-    span{
+
+    span {
         color: var(--text-primary);
-        font-size: 1rem;/*tamaño letra*/
-        padding: 0.5rem;/*esto es para alejarlo del check*/
+        font-size: 1rem;
+        /*tamaño letra*/
+        padding: 0.5rem;
+        /*esto es para alejarlo del check*/
 
     }
-    li{
-        display: flex;/*esto lo transforma en flex*/
-        align-items: center;/*esto centra el texto con el check*/
+
+    li {
+        display: flex;
+        /*esto lo transforma en flex*/
+        align-items: center;
+        /*esto centra el texto con el check*/
     }
 }
-.oferta h2 + p{
+
+.oferta h2+p {
     color: var(--text-primary);
 }
 
@@ -764,7 +775,7 @@ ul {
     padding-top: 2rem;
     /* Espacio para terminar bien la página */
     padding-bottom: 3rem;
-    
+
     /* Flex para empujar rápido el botón al extremo derecho */
     display: flex;
     justify-content: flex-end;

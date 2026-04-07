@@ -22,18 +22,18 @@ botones.forEach(boton => {
 
 const JobsListingSection = document.querySelector('.resultados')//elemento padre
 
-JobsListingSection?.addEventListener('click', function(event) {//a esta funcion recibe el evento del click
+JobsListingSection?.addEventListener('click', function (event) {//a esta funcion recibe el evento del click
     //lo que hace el ? es preguntar si existe es como un if 
     // (JobsListingSection !== null && JobsListingSection !== undefined) 
     // y poner dentro lo de abajo pero es mejor esto del ?
-    const element=event.target//me dice en que elemento se hizo click
+    const element = event.target//me dice en que elemento se hizo click
 
-    if(element.classList.contains('btn-aplicar')){
+    if (element.classList.contains('btn-aplicar')) {
         element.textContent = 'Aplicado!'
         element.classList.add('is-applied')
         element.disabled = true
     }
-    if(element.classList.contains('empleo-card' && 'empleo-info')){
+    if (element.classList.contains('empleo-card' && 'empleo-info')) {
         window.location.href = './detalles-de-la-oferta.html'
         console.log(element)
         //console.log(element.querySelector('.info').textContent)
@@ -42,24 +42,41 @@ JobsListingSection?.addEventListener('click', function(event) {//a esta funcion 
 
 const filtert = document.querySelector('#filter-technology')
 
-filtert.addEventListener('change', function() {
+filtert.addEventListener('change', function () {
     console.log(filtert.value)
 })
 
 const filterl = document.querySelector('#filter-location')
 
-filterl.addEventListener('change', function() {
+filterl.addEventListener('change', function () {
     console.log(filterl.value)
 })
 
 const filterc = document.querySelector('#filter-contract-type')
 
-filterc.addEventListener('change', function() {
+filterc.addEventListener('change', function () {
     console.log(filterc.value)
 })
 
 const filtere = document.querySelector('#filter-experience-level')
 
-filtere.addEventListener('change', function() {
+filtere.addEventListener('change', function () {
     console.log(filtere.value)
+})
+
+const searchForm = document.querySelector('#empleos_search_form')
+const job = document.querySelectorAll('.empleo-card')
+//esto recupera todos los empleos de sus tarjetas
+searchForm.addEventListener('submit', function (event) {
+    event.preventDefault()
+    //esto es lo que dice el nombre que no hara lo default de html y hara lo de abajo
+    job.forEach(job => {
+        const modalidad = job.dataset.modalidad
+        //console.log(job.dataset.technology)
+        if (selectedValue === '' || selectedValue === modalidad) {
+            job.style.display = 'flex'
+        } else {
+            job.style.display = 'none'
+        }
+    })
 })
