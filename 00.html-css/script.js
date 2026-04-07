@@ -64,11 +64,11 @@ filtere.addEventListener('change', function () {
     console.log(filtere.value)
 })
 
-const searchForm = document.querySelector('#empleos_search_form')
+const searchForm = document.querySelector('#filter-location')
 const job = document.querySelectorAll('.empleo-card')
 //esto recupera todos los empleos de sus tarjetas
-searchForm.addEventListener('submit', function (event) {
-    event.preventDefault()
+searchForm.addEventListener('change', function () {
+    const selectedValue = searchForm.value
     //esto es lo que dice el nombre que no hara lo default de html y hara lo de abajo
     job.forEach(job => {
         const modalidad = job.dataset.modalidad

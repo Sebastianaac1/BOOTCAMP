@@ -448,12 +448,10 @@ select {
 
 /* Tarjetas de empleo */
 
-.empleo-info {
+.empleo-card-content {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 0.5rem;
-
+    flex-direction: column;
+    gap: 0.25rem;
 }
 
 .empleo-card h3 {
@@ -463,7 +461,7 @@ select {
 }
 
 .empleo-card .empresa {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
 }
 
@@ -471,6 +469,7 @@ select {
     font-size: 0.875rem;
     color: var(--text-muted);
     line-height: 1.5;
+    margin-top: 0.5rem;
 }
 
 /* BotÃ³n Aplicar */
@@ -574,12 +573,16 @@ select {
 /* Reutiliza article como base, solo sobreescribe lo necesario */
 .empleo-card {
     background-color: transparent;
-
     padding: 1.25rem 1.5rem;
     margin-bottom: 0;
     box-shadow: none;
     border-radius: 0;
     transition: border-color 0.2s;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
 }
 
 
