@@ -77,12 +77,18 @@
             <!-- Filtros justo debajo del buscador -->
             <div class="filtros">
                 <select name="technology" id="filter-technology">
-                    <option disabled selected class="ocultar">Tecnología</option>
-                    <option value="javascript">JavaScript</option>
-                    <option value="python">Python</option>
-                    <option value="java">Java</option>
-                    <option value="react">React</option>
-                    <option value="nodejs">Node.js</option>
+                    <optgroup label="Tecnología">
+                        <option disabled selected class="ocultar">Tecnología</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="react">React</option>
+                        <option value="nodejs">Node.js</option>
+                    </optgroup>
+                    <hr />
+                    <option value="c#">C#</option>
+                    <hr />
+                    <option value="ruby">Ruby</option>
                 </select>
                 <select name="location" id="filter-location">
                     <option disabled selected class="ocultar">Ubicación</option>
