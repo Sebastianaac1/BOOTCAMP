@@ -72,11 +72,13 @@ searchForm.addEventListener('change', function () {
     //esto es lo que dice el nombre que no hara lo default de html y hara lo de abajo
     job.forEach(job => {
         const modalidad = job.dataset.modalidad
+        const isShow=selectedValue===''||selectedValue===modalidad
+        job.classList.toggle('is-hiden', isShow===false)
         //console.log(job.dataset.technology)
-        if (selectedValue === '' || selectedValue === modalidad) {
+        /*if (selectedValue === '' || selectedValue === modalidad) {
             job.style.display = 'flex'
         } else {
             job.style.display = 'none'
-        }
+        }*/
     })
 })
