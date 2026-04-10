@@ -32,11 +32,13 @@ JobsListingSection?.addEventListener('click', function (event) {//a esta funcion
         element.textContent = 'Aplicado!'
         element.classList.add('is-applied')
         element.disabled = true
+        return; // Esto detiene la ejecución para que no abra los detalles de la oferta al hacer click en Aplicar
     }
-    if (element.classList.contains('empleo-card' && 'empleo-info')) {
+    
+    // .closest() busca si diste click en la tarjeta, o en cualquier hijo dentro de ella (título, texto, etc.)
+    const card = element.closest('.empleo-card');
+    if (card) {
         window.location.href = './detalles-de-la-oferta.html'
-        console.log(element)
-        //console.log(element.querySelector('.info').textContent)
     }
 })
 
@@ -73,7 +75,8 @@ searchForm.addEventListener('change', function () {
     job.forEach(job => {
         const modalidad = job.dataset.modalidad
         const isShow=selectedValue===''||selectedValue===modalidad
-        job.classList.toggle('is-hiden', isShow===false)
+        job.classList.toggle('is-hiden', isShow===false)//la mejor forma es esta ya que 
+        //es mas limpia y no necesita tanto codigo y es mas eficiente
         //console.log(job.dataset.technology)
         /*if (selectedValue === '' || selectedValue === modalidad) {
             job.style.display = 'flex'
