@@ -45,7 +45,6 @@
 select{
     background-position: right 0.5rem center;/*esto es para que un svg este a la derecha*/
     &:hover{
-        background-color: var(--primary-hover);
         color:white;
     }
     &:focus{

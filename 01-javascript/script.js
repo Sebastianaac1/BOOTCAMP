@@ -67,12 +67,16 @@ filtere.addEventListener('change', function () {
 })
 
 const searchForm = document.querySelector('#filter-location')
-const job = document.querySelectorAll('.empleo-card')
+//const jobs = document.querySelectorAll('.empleo-card')
+//al crear esto fuera de lo siguiente no alcanza a escuchar cuando se crea el job
+//console.log(jobs)
 //esto recupera todos los empleos de sus tarjetas
 searchForm.addEventListener('change', function () {
     const selectedValue = searchForm.value
+    const jobs = document.querySelectorAll('.empleo-card')
+    //por esto se mueve aca para que pueda escuchar cuando se crea el job
     //esto es lo que dice el nombre que no hara lo default de html y hara lo de abajo
-    job.forEach(job => {
+    jobs.forEach(job => {
         const modalidad = job.dataset.modalidad
         const isShow=selectedValue===''||selectedValue===modalidad
         job.classList.toggle('is-hiden', isShow===false)//la mejor forma es esta ya que 
@@ -85,3 +89,29 @@ searchForm.addEventListener('change', function () {
         }*/
     })
 })
+
+const container = document.querySelector('.entero')
+fetch('./data.json')
+    .then(response => {
+        return response.json();
+    })
+    .then((jobs) => {
+        console.log(jobs);
+        jobs.forEach(job => {
+            const article =document.createElement('article')
+            article.className='empleo-card'
+            article.dataset.modalidad=job.data.modalidad
+            article.dataset.nivel=job.data.nivel
+            article.dataset.technology=job.data.technology//todo esto el del json pero 
+            //es para sacar el sub "json" data
+            article.innerHTML=`<div>
+                <h3>${job.titulo}</h3>
+                <small class="empresa">${job.empresa} | ${job.ubicacion}</small>
+                <p>${job.descripcion}</p>
+            </div>
+            <button class="btn-aplicar">Aplicar</button>`
+
+            container.appendChild(article)
+        });
+    });
+
