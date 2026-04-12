@@ -28,7 +28,7 @@
         })
     </script>-->
     <!--Pero para hacerlo bien y mejor es asi -->
-    <script type="module" src="./script.js"></script>
+    <script type="module" src="./main.js"></script>
     <!--Esta arrow funcion tiene un return implicito-->
 </head>
 
@@ -57,7 +57,7 @@
         </nav>
         <div>
             <a href="" class="btn-subir-cv">Subir CV</a>
-            <a href="" class="avatar">👤</a>
+            <devjobs-avatar service="github" username="sebastianaac1" size="30"></devjobs-avatar>
         </div>
     </header>
     <main>
@@ -66,7 +66,7 @@
             <h1>Encuentra tu próximo trabajo</h1>
             <p>Explora miles de oportunidades en el sector tecnológico</p>
 
-            <form role="search">
+            <form role="search" id="search-form">
                 <div class="search_bar">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -111,7 +111,7 @@
                 <select name="experience-level" id="filter-experience-level">
                     <option disabled selected class="ocultar">Nivel de experiencia</option>
                     <option value="junior">Junior</option>
-                    <option value="mid">Mid</option>
+                    <option value="mid-level">Mid</option>
                     <option value="senior">Senior</option>
                     <option value="lead">Lead</option>
                 </select>
