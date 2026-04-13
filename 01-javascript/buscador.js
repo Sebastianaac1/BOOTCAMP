@@ -9,7 +9,7 @@ searchForm?.addEventListener('submit', function(event){
     event.preventDefault()
 
     // Obtenemos el valor del input en minúsculas para hacer una búsqueda flexible
-    const selectedValue = searchInput.value.toLowerCase().trim()
+    const selectedValue = searchInput?.value.toLowerCase().trim()
     const jobs = document.querySelectorAll('.empleo-card')
     console.log(selectedValue)
     jobs.forEach(job => {
